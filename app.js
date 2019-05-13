@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var uuid = require('node-uuid');
+var dotenv = require('dotenv').config();
 
 var pg = require('pg');
 var conString = process.env.DB; // "postgres://username:password@localhost/database";
