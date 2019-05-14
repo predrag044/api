@@ -3,4 +3,4 @@ phases:
         install:
                 commands:
                         - npm install dotenv
-                        - echo predrag
+                        - npm install
