@@ -2,5 +2,17 @@ version: 0.2
 phases:
         install:
                 commands:
-                        - npm install dotenv
                         - npm install
+        build:
+                commands:
+                        - echo "Nothing to build as this is njs!"
+
+artifacts:
+        files:
+                - .env
+                - node_modules/**/*
+                - bin/*
+                - package.json
+                - app.js
+                - start.sh
+                - appspec.yml

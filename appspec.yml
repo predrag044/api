@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+
+files:
+        - source: /
+          destination: /home/ec2-user/api
+
+permissions:
+        - object: /home/ec2-user/api/start.sh
+          owner: ec2-user
+          group: ec2-user
+          mode: 777
+          type:
+            - file
+
+hooks:
+        ApplicationStart:
+                - location: start.sh
+                  timeout: 30
+                  runas: ec2-user
